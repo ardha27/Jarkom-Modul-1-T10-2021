@@ -40,7 +40,7 @@ Jawaban pertanyaan : Putih hijau - Hijau - Putih Orange - Biru - Putih biru - or
 
 ### 4.Temukan paket mysql yang mengandung perintah query select!
 
-Melakukan display filter `Frame contains “SELECT”` dan akan didapatkan hasil sebagai berikut
+Melakukan display filter `Frame matches “SELECT”` dan akan didapatkan hasil sebagai berikut
 
 <img src="screenshot/4.1.png">
 
