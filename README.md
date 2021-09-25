@@ -54,6 +54,61 @@ Lalu, terdapat soal sebagai berikut,
 
 <img src="screenshot/5.2.png">
 
+### 6.Cari username dan password ketika melakukan login ke FTP Server!
+
+Untuk mendapatkan username dan password, kami menggunakan display filter “ftp” dan didapatkan username : secretuser dan password :  aku.pengen.pw.aja
+
+<img src="screenshot/6.1.png">
+
+### 7.Ada 500 file zip yang disimpan ke FTP Server dengan nama 0.zip, 1.zip, 2.zip, ..., 499.zip. Simpan dan Buka file pdf tersebut. (Hint = nama pdf-nya "Real.pdf")
+
+Pertama menggunakan filter command tcp contains “Real.pdf” untuk mencari file pdf yang diinginkan. Kemudian untuk download file tersebut, klik kanan, Follow > TCP Stream, kemudian pada “Show data as” kita pilih Raw lalu Save as, nama zip tersebut aku simpan dalam hasil.zip
+
+<img src="screenshot/7.1.png">
+<img src="screenshot/7.2.png">
+<img src="screenshot/7.3.png">
+
+### 8.Cari paket yang menunjukan pengambilan file dari FTP tersebut!
+
+Menggunakan display filter “ftp.request == RETR” dan tidak didapatkan hasil apa-apa sehingga disimpulkan tidak ada file yang di-download
+
+<img src="screenshot/8.1.png">
+
+### 9.Dari paket-paket yang menuju FTP terdapat inidikasi penyimpanan beberapa file. Salah satunya adalah sebuah file berisi data rahasia dengan nama "secret.zip". Simpan dan buka file tersebut!
+
+Langkah pertama adalah mencari file dengan display filter “ftp-data”, kemudian akan muncul file secret.zip. 
+
+<img src="screenshot/9.1.png">
+
+Klik kanan dan follow TCP stream , kemudian simpan file sebagai raw dengan nama “secret.zip” dan file akan muncul dengan nama secret extensi .zip dan buka file tersebut, dimana terdapat file wanted.pdf didalamnya
+
+<img src="screenshot/9.2.png">
+<img src="screenshot/9.3.png">
+<img src="screenshot/9.4.png">
+<img src="screenshot/9.5.png">
+
+### 10.Selain itu terdapat "history.txt" yang kemungkinan berisi history bash server tersebut! Gunakan isi dari "history.txt" untuk menemukan password untuk membuka file rahasia yang ada di "secret.zip"!
+
+Untuk mencari history.txt, kami menggunakan display filter “ftp-data” dan mencari info history.txt
+
+<img src="screenshot/10.1.png">
+
+Lalu dilakukan follow -> TCP stream pada data
+
+<img src="screenshot/10.2.png">
+
+Didapatkan hasil sebagai berikut, yang dimana menjelaskan bahwa password dari wanted.pdf adalah baris terakhir dari bukanapaapa.txt. Selanjutnya kami mencari info bukanapaapa.txt
+
+<img src="screenshot/10.3.png">
+
+Lalu dilakukan follow -> TCP stream pada data
+
+<img src="screenshot/10.4.png">
+
+Didapatkan text sebagai berikut, “d1b1langbukanapaapajugagapercaya”. Kami menggunakan text tersebut sebagai password dari wanted.pdf. Didapatkan hasil wanted.pdf sebagai berikut,
+
+<img src="screenshot/10.5.png">
+
 ### 11. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80!
 
 Kita dapat menggunakan filter command : `src port 80`
