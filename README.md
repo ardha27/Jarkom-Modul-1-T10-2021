@@ -2,7 +2,7 @@
 
 PRAKTIKUM MODUL 1 JARINGAN KOMPUTER 2021
 
-Anggota Kelompok IT07:<br>
+Anggota Kelompok T10:<br>
 Tri Rizki Yuliawan (05311940000024) <br>
 Kevin Nathaniel (05311940000032) <br>
 I Gde Ardha Semaranatha Gunasatwika (05311940000034) <br>
