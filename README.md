@@ -144,3 +144,7 @@ Untuk mencari ip, kami menggunakan command prompt, kemudian mengetikkan command 
 Sehingga untuk mengambil paket yang berasal dari ip kami, dapat menggunakan capture filter: `ip src 192.168.43.13`
 
 <img src="screenshot/15.2.png">
+
+### Kendala
+
+terdapat anggota kelompok kami yang mengalami gangguan internet sehingga kurang dapat mengerjakan secara maksimal
